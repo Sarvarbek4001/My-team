@@ -1,0 +1,330 @@
+body {
+  background-color: $color-green-56;
+  color: $color-white;
+}
+
+.logo {
+  text-decoration: none;
+  display: inline-block;
+
+  &_img {
+    width: 16rem;
+    height: 4rem;
+
+    @include respond(phone) {
+      width: 12.8rem;
+      height: 3.2rem;
+    }
+  }
+}
+
+// section1 talent
+.talent {
+  margin-top: calc(12.9rem - 6.7rem);
+
+  background-image: url(../images/talent-img-1.png);
+  background-repeat: no-repeat;
+  background-size: 20rem 20rem;
+  // background-position: calc(50% - 68rem) 6rem;
+  background-position: -10rem 6rem;
+
+  @media only screen and (min-resolution:192dpi)and(min-width:376px),
+  (min-width:2000px) {
+    background-image: url(../images/talent-img-1@2x.png);
+  }
+
+  @include respond(tablet) {
+    background-image: none;
+    text-align: center;
+    margin-top: calc(11.2rem - 6.7rem);
+  }
+
+  @include respond(phone) {
+    margin-top: 8rem;
+  }
+
+  & .container {
+    @extend %jsb;
+    background-image: url(../images/talent-img-2.png);
+    background-repeat: no-repeat;
+    background-size: 35.8rem 10rem;
+    background-position: right bottom;
+    padding-bottom: calc(25rem - 6.7rem);
+
+    @media only screen and (min-resolution:192dpi)and(min-width:376px),
+    (min-width:2000px) {
+      background-image: url(../images/talent-img-2@2x.png);
+    }
+
+    @include respond(tablet) {
+      flex-direction: column;
+      background-position: center bottom;
+      padding-bottom: calc(25.6rem - 6.7rem);
+    }
+
+    @include respond(phone) {
+      padding-bottom: 19.7rem;
+    }
+
+  }
+
+  &__h1 {
+    font-weight: bold;
+    font-size: 10rem;
+    line-height: 10rem;
+    width: 55.5rem;
+
+    @include respond(tablet) {
+      font-size: 6.4rem;
+      line-height: 5.6rem;
+    }
+
+    @include respond(phone) {
+      font-size: 4rem;
+      line-height: 4rem;
+      width: 24rem;
+      margin-bottom: 1.8rem;
+      margin-top: 0;
+    }
+  }
+
+  &__span {
+    color: $color-light-coral;
+  }
+
+  &__p {
+    width: 44.5rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+
+    @include respond(phone) {
+      width: 32.7rem;
+      font-size: 1.5rem;
+    }
+
+    &::before {
+      @include ba(5rem, 4px) {
+        background-color: $color-blue-c7;
+      }
+
+      margin-bottom: 8rem;
+      display: flex;
+
+      @include respond(tablet) {
+        display: none;
+      }
+    }
+
+  }
+
+
+}
+
+// section2 build
+
+.build {
+  background-color: $color-green-34;
+  padding-top: 19.8rem;
+  padding-bottom: calc(14rem - 3.2rem);
+  background-image: url(../images/section2-img.png);
+  background-repeat: no-repeat;
+  background-size: 20rem, 24.4rem;
+  // background-position: calc(50% + 68.5rem) bottom;
+  background-position: calc(100% + 10rem) bottom;
+
+  @media only screen and (min-resolution:192dpi)and(min-width:376px),
+  (min-width:2000px) {
+    background-image: url(../images/section2-img@2x.png);
+  }
+
+  @include respond(tablet) {
+    background-position: calc(100% + 10rem) top;
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 3.2rem);
+  }
+
+  @include respond(phone) {
+    padding-bottom: calc(6.4rem - 4.8rem);
+  }
+
+  & .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include respond(tablet) {
+      flex-direction: column;
+      padding: 0 9.8rem;
+    }
+
+    @include respond(phone) {
+      padding: 0 1.5rem;
+    }
+  }
+
+  &__ul {
+    @include respond(phone) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__list {
+    list-style: none;
+
+    &-contact {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    display: flex;
+
+    position: relative;
+
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-img {
+      width: 5.6rem;
+      height: 5.6rem;
+
+      position: absolute;
+      top: -.6rem;
+      left: -1.8rem;
+
+      @include respond(phone) {
+        top: -1.5rem;
+        left: 12rem;
+      }
+
+      &-contact {
+        @include respond(phone) {
+          top: -1.6rem;
+          left: -1.6rem;
+        }
+      }
+    }
+
+    &::before {
+      @include ba(5.6rem, 5.6rem) {
+        background-color: $color-blue-69;
+        border-radius: 50%;
+        margin-right: 2.3rem;
+        margin-top: 1rem;
+
+        @include respond(phone) {
+          margin: 0;
+          margin-bottom: 1.6rem;
+        }
+      }
+    }
+
+    &-contact {
+      align-items: center;
+
+      @include respond(phone) {
+        flex-direction: row;
+      }
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    width: 44.5rem;
+    margin-bottom: 3.2rem;
+
+    @include respond(phone) {
+      width: 32.7rem;
+      text-align: center;
+      margin-bottom: 4.8rem;
+    }
+  }
+}
+
+// section 3 SUCCESS
+
+.success {
+  background-color: $color-green-47;
+  text-align: center;
+  padding-top: 14rem;
+  padding-bottom: 15.1rem;
+
+  background-image: url(../images/section3-img-1.png), url(../images/section3-img-2.png);
+  background-size: 14.7rem 10rem, 20rem 10rem;
+  background-repeat: no-repeat;
+  // background-position: calc(50% - 60.2rem) top, calc(50% + 57.6rem) bottom;
+  background-position: left top, right bottom;
+
+  @media only screen and (min-resolution:192dpi)and(min-width:376px),
+  (min-width:2000px) {
+    background-image: url(../images/section3-img-1@2x.png), url(../images/section3-img-2@2x.png);
+  }
+
+  @include respond(tablet) {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 4.8rem);
+  }
+
+  @include respond(phone) {
+    padding-top: 14rem;
+    padding-bottom: calc(16.4rem - 4.8rem);
+  }
+}
+
+.boxs {
+  @extend %jsb;
+  margin-top: calc(9.2rem - 3.6rem);
+
+  @include respond(tablet) {
+    flex-direction: column;
+  }
+}
+
+.box__p-13 {
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  color: $color-white;
+
+  display: block;
+}
+
+// section 4 STARTED
+
+.started {
+  padding: 7.6rem 0;
+  background-color: $color-light-coral;
+  background-image: url(../images/section4-img.png);
+  background-size: 20rem 14.4rem;
+  background-repeat: no-repeat;
+  // background-position: calc(50% - 57.6rem) bottom;
+  background-position: left bottom;
+
+  @media only screen and(min-resolution:192dpi)and(min-width:376px),
+  (min-width:2000px) {
+    background-image: url(../../images/section4-img@2x.png);
+  }
+
+  // @include respond (tablet) {
+  //   background-position: left 7.8rem;
+  // }
+
+  @include respond(phone) {
+    padding: 8.3rem;
+  }
+
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+  }
+}

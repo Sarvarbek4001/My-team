@@ -1,0 +1,346 @@
+.h3 {
+  font-weight: bold;
+  font-size: 4.8rem;
+  line-height: 4.8rem;
+
+  @include respond(tablet) {
+    font-size: 3.2rem;
+    line-height: 3.2rem;
+  }
+
+
+
+  &--build {
+    width: 44.5rem;
+    position: relative;
+
+    @include respond(tablet) {
+      margin-bottom: 6.4rem;
+    }
+
+    @include respond(phone) {
+      width: 24rem;
+      margin-bottom: 5.6rem;
+      margin-bottom: 7.2rem;
+    }
+
+    &::before {
+      position: absolute;
+      top: -5.8rem;
+      left: 0;
+
+      @include ba(5rem, 4px) {
+        background-color: $color-light-coral;
+      }
+    }
+  }
+
+  &--success {
+    width: 93.2rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include respond (tablet) {
+      width: 57.3rem;
+    }
+
+    @include respond(phone) {
+      width: 32.7rem;
+    }
+
+    &__span {
+      color: $color-blue-c7
+    }
+  }
+
+  &--started {
+    color: $color-green-34;
+
+    @include respond(phone) {
+      width: 32.7rem;
+      text-align: center;
+      margin-bottom: 2.4rem;
+    }
+  }
+}
+
+.p-18 {
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  display: block;
+
+  @include respond(tablet) {
+    font-size: 1.5rem;
+  }
+
+  &--build {
+    color: $color-light-coral;
+    margin-bottom: 1.6rem;
+
+    @include respond(phone) {
+      margin-bottom: .8rem;
+    }
+  }
+
+  &--success {
+    margin-bottom: .2rem;
+    color: $color-blue-c7;
+
+    @include respond(tablet) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &--about {
+    width: 73rem;
+
+    @include respond(tablet) {
+      width: 46rem;
+    }
+
+    @include respond(phone) {
+      width: 32.7rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &::before {
+      @include ba(5rem, .4rem) {
+        background-color: $color-light-coral;
+      }
+
+      display: flex;
+      margin-bottom: 4rem;
+
+      @include respond(tablet) {
+        display: none;
+      }
+    }
+
+    &-meet {
+      color: $color-blue-c7;
+      width: 30.2rem;
+
+      @include respond(tablet) {
+        width: 23.3rem;
+        font-size: 1.8rem;
+      }
+
+      @include respond(phone) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  &--contact {
+    color: $color-white;
+
+    @include respond(phone) {
+      margin-left: 2.3rem;
+      margin-top: -4rem;
+      width: 20rem;
+      text-align: start;
+    }
+  }
+}
+
+.p-15 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: $color-white;
+  display: block;
+
+  &--build {
+    opacity: .8;
+  }
+
+  &--success {
+    margin-bottom: 2.4rem;
+
+    @include respond(tablet) {
+      width: 57.3rem;
+      margin-bottom: 1.6rem;
+    }
+
+    @include respond(phone) {
+      width: 32.7rem;
+    }
+  }
+
+  &--footer {
+    font-style: normal;
+    width: 44.5rem;
+    opacity: .6;
+
+    @include respond(tablet) {
+      width: 28rem;
+      text-align: end;
+    }
+
+    @include respond(phone) {
+      text-align: center;
+    }
+  }
+
+  &--communication {
+    margin-top: 5.1rem;
+    opacity: .6;
+
+    @include respond(tablet) {
+      margin-top: 0;
+    }
+
+    @include respond(phone) {
+      text-align: center;
+    }
+  }
+
+  &--about-meet {
+    font-style: italic;
+    font-weight: 500;
+    width: 30.2rem;
+
+    @include respond(tablet) {
+      width: 23.3rem;
+    }
+
+    @include respond(phone) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.box {
+  width: 35rem;
+  display: inline-block;
+  text-decoration: none;
+  padding-top: 3.6rem;
+
+  background-image: url(../images/qoshtirnoq.png);
+  background-size: 6.7rem 5.6rem;
+  background-repeat: no-repeat;
+  background-position: center 0;
+
+  @include respond(tablet) {
+    width: 57.3rem;
+    margin-bottom: 4.8rem;
+  }
+
+  @include respond(phone) {
+    width: 32.7rem;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 6.2rem;
+    height: 6.2rem;
+    border-radius: 50%;
+
+    margin-top: 3.2rem;
+
+    @include respond(tablet) {
+      margin-top: 1.6rem;
+    }
+  }
+
+  &--setora {
+    &::after {
+      background-image: url(../images/setora.png);
+    }
+  }
+
+  &--malika {
+    &::after {
+      background-image: url(../images/malika.png);
+    }
+  }
+
+  &--jek {
+    &::after {
+      background-image: url(../images/jek.png);
+    }
+  }
+
+}
+
+.h2 {
+  font-weight: bold;
+  font-size: 6.4rem;
+  line-height: 10rem;
+  color: $color-white;
+
+  @include respond(tablet) {
+    margin-bottom: 2.4rem;
+    line-height: 5.6rem;
+  }
+
+  @include respond(phone) {
+    margin-bottom: 1.6rem;
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+
+.director {
+  text-decoration: none;
+  // display: inline-block;
+  display: block;
+  background-color: $color-green-34;
+  padding: 3.2rem 2.4rem 5.6rem 2.4rem;
+  margin-bottom: 7.6rem;
+
+  position: relative;
+
+  @include respond(phone) {
+    width: 100%;
+    margin-bottom: 5.2rem;
+  }
+
+  &::before {
+    @include badimg(9.6rem, 9.6rem, '../images/nikita.png');
+    margin-bottom: 1.6rem;
+  }
+
+  &--cristian {
+    &::before {
+      background-image: url(../images/cristian.png);
+    }
+  }
+
+  &--cruz {
+    &::before {
+      background-image: url(../images/cruz.png);
+    }
+  }
+
+  &--drake {
+    &::before {
+      background-image: url(../images/drake.png);
+    }
+  }
+
+  &--griffin {
+    &::before {
+      background-image: url(../images/griffin.png);
+    }
+  }
+
+  &--aden {
+    padding-top: 3.9rem;
+
+    &::before {
+      widows: 0;
+      height: 0;
+      background-image: none;
+      margin-bottom: 0;
+    }
+
+  }
+}
